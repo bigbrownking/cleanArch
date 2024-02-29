@@ -7,9 +7,9 @@ import (
 
 type Contact struct {
 	ID         string
-	firstName  string
-	lastName   string
-	middleName string
+	FirstName  string
+	LastName   string
+	MiddleName string
 	Phone      string
 }
 
@@ -26,15 +26,15 @@ func NewContact(id, firstName, lastName, middleName, phone string) (*Contact, er
 
 	return &Contact{
 		ID:         id,
-		firstName:  firstName,
-		lastName:   lastName,
-		middleName: middleName,
+		FirstName:  firstName,
+		LastName:   lastName,
+		MiddleName: middleName,
 		Phone:      phone,
 	}, nil
 }
 
 func (c *Contact) FullName() string {
-	return c.firstName + " " + c.middleName + " " + c.lastName
+	return c.FirstName + " " + c.MiddleName + " " + c.LastName
 }
 
 func NewGroup(id, name string, contacts []Contact) (*Group, error) {

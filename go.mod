@@ -2,7 +2,11 @@ module cleanArch
 
 go 1.21
 
-require github.com/jackc/pgx/v4 v4.18.1
+require (
+	github.com/google/uuid v1.6.0
+	github.com/jackc/pgx/v4 v4.18.1
+	github.com/opentracing/opentracing-go v1.2.0
+)
 
 require (
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
